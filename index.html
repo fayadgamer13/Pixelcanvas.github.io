@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PixelCanvas</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="toolbar">
+    <input type="color" id="colorPicker" />
+    <input type="text" id="hexInput" placeholder="#RRGGBB" />
+    <input type="range" id="brushSize" min="1" max="50" />
+    <button onclick="setTool('brush')">🖌️ Brush</button>
+    <button onclick="setTool('eraser')">🧽 Eraser</button>
+    <button onclick="setTool('bucket')">🪣 Bucket</button>
+    <button onclick="setTool('eraseBucket')">🪣 Erase Fill</button>
+    <input type="file" id="importImage" accept="image/*" />
+    <button onclick="addLayer()">➕ Layer</button>
+    <button onclick="downloadImage()">⬇️ Download</button>
+    <select id="formatSelect">
+      <option value="png">PNG</option>
+      <option value="jpg">JPG</option>
+      <option value="svg">SVG</option>
+      <option value="pdf">PDF</option>
+    </select>
+    <label><input type="checkbox" id="transparentBg" /> Transparent BG</label>
+  </div>
+
+  <div id="canvasContainer"></div>
+</body>
+<script src="script.js"></script>
+</html>

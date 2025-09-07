@@ -1,0 +1,79 @@
+:root {
+  --primary: #1e88e5;
+  --accent: #ffffff;
+  --bg: #f9f9f9;
+  --border: #e0e0e0;
+  --shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  --radius: 12px;
+  --font: 'Segoe UI', sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  background-color: var(--bg);
+  color: #333;
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 12px;
+  background-color: var(--accent);
+  border-bottom: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.toolbar input,
+.toolbar select,
+.toolbar button {
+  padding: 8px 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background-color: var(--bg);
+  font-size: 14px;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.toolbar input[type="color"] {
+  padding: 0;
+  border: none;
+  background: none;
+}
+
+.toolbar button {
+  background-color: var(--primary);
+  color: var(--accent);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.toolbar button:hover {
+  background-color: #1565c0;
+}
+
+.toolbar select {
+  background-color: var(--accent);
+}
+
+canvas {
+  display: block;
+  margin: 20px auto;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+  background-color: transparent;
+  touch-action: none;
+}
+
+#canvasContainer {
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+  max-width: 100%;
+}
